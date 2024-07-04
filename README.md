@@ -14,7 +14,7 @@ The Notes Collection Organizer is a tool designed to help manage digital notes e
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/notes-collection
+git clone https://github.com/gabrielchoong/Notes-Collection-Organizer.git
 cd notes-collection
 ```
 
