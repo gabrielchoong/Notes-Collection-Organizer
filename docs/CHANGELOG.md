@@ -1,0 +1,52 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+<!-- This is a comment in Markdown 
+
+Types of changes
+
+Added: for new features.
+Changed: for changes in existing functionality.
+Deprecated: for soon-to-be removed features.
+Removed: for now removed features.
+Fixed: for any bug fixes.
+Security: in case of vulnerabilities.
+
+-->
+
+## [Unreleased]
+
+### Added
+
+- Initial version of the `tasks.sh` script with `sync-readme`, `run-tests`, and `all` options.
+- Function to create notes from a template.
+- Function to create blank notes.
+- Ability to add tags to notes.
+- `tasks.sh` to automate common tasks.
+- Functions in `utils.py` are now modularised in `scripts/` folder.
+- `.gitignore` for executables
+
+### Changed
+
+- Updated argument parsing to handle `--no-template` option.
+- Separated `search_notes` function into its own function.
+- Moved note creation functions to `create_note.py`.
+- Updated `.markdownlint.json` to include `MD024: false`.
+
+### Fixed
+
+- Bug where notes were being created with both template and blank options.
+- Bug where tags are broken with `--no-template` option.
+
+## [0.1.0] - 2024-07-04
+
+### Added
+
+- This `CHANGELOG.md` file to hopefully serve as an evolving example of a standardized open source project CHANGELOG.
+- Initial setup of the notes organizer project.
+- Basic functionality to create notes from a template.
+- Command-line interface for creating notes.
