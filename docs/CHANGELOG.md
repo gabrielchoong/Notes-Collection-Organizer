@@ -18,6 +18,25 @@ Security: in case of vulnerabilities.
 
 -->
 
+## [Unreleased]
+
+### Added
+
+#### Patch Notes
+
+- Added install guide in `INSTALL.md`.
+- Added instructions in `USAGE.md`.
+- Slightly updated `README.md`
+- Updated `docs-template.md` and `note-template.md` in `template/`.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [0.2.0] - 2024-07-05
 
 ### Main Features
