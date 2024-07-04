@@ -41,17 +41,11 @@ The Digital Notes Collection project is designed to streamline and manage note-t
    - Maintained a `README.md` for project description and usage instructions.
    - Planned to create a `CHANGELOG.md` to keep track of changes and updates.
 
-## Pending Tasks
+## Main Features in Version 0.2.0
 
-1. **Refinement and Enhancements**
-   - Refine parameter estimation and model selection criteria.
-   - Explore alternative distributional assumptions and additional variables for better forecasting.
-
-2. **Broader Analysis**
-   - Expand analysis to include economic indicators and sentiment analysis from social media.
-
-3. **Future Improvements**
-   - Enhance the robustness of volatility models to handle evolving market conditions.
+- Functionality to create notes without a template.
+- Added `tasks.sh` for file versions and backup.
+- Minor bug fixes regarding the new `--no-template` option.
 
 ## Notes
 

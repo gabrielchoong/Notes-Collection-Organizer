@@ -18,7 +18,13 @@ Security: in case of vulnerabilities.
 
 -->
 
-## [Unreleased]
+## [0.2.0] - 2024-07-05
+
+### Main Features
+
+- Functionality to create notes without a template.
+- Added `tasks.sh` for file versions and backup.
+- Minor bug fixes regarding the new `--no-template` option.
 
 ### Added
 
@@ -43,6 +49,10 @@ Security: in case of vulnerabilities.
 - Bug where tags are broken with `--no-template` option.
 
 ## [0.1.0] - 2024-07-04
+
+### Main Features
+
+- Basic functionality to create notes from a template.
 
 ### Added
 
