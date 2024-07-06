@@ -17,6 +17,11 @@ Fixed: for any bug fixes.
 Security: in case of vulnerabilities.
 
 -->
+## [Unreleased]
+
+### Added
+
+- `--search` option is now functional.
 
 ## [0.2.1] - 2024-07-05
 
