@@ -1,30 +1,9 @@
 import argparse
 
 from scripts.create_note import create_note_from_template, create_note_without_template
+from scripts.search_note import search_notes
 
-def search_notes(tags):
-    if tags is None:
-        print('Searching notes with no tags specified')
-    else:
-        print(f'Searching notes with tags: {tags}')
-        # Implement search function
-
-def main():
-
-    """
-    Main entry point for the Digital Notes Organizer script.
-
-    This function sets up the argument parser, processes command-line arguments,
-    and calls the appropriate functions to handle creating and searching notes.
-
-    Command-line arguments:
-        --search TAG [TAG ...]    Search notes based on given tag(s).
-        --create TITLE [TITLE ...]    Create new notes based on template with specified title(s).
-        --tags TAG [TAG ...]    Add tags directly to the new note(s).
-        --target-folder FOLDER    Specify the target folder to save the new notes (default: current folder).
-    """
-
-
+def parsers():
     parser = argparse.ArgumentParser(description='Digital Notes Organizer.',
                                      formatter_class=argparse.RawTextHelpFormatter)
 
@@ -55,6 +34,19 @@ def main():
     
 
     args = parser.parse_args()
+    return args
+
+
+def main():
+
+    """
+    Main entry point for the Digital Notes Organizer script.
+
+    This function sets up the argument parser, processes command-line arguments,
+    and calls the appropriate functions to handle creating and searching notes.
+    """
+
+    args = parsers()
 
     if args.search_tags is not None:
         search_notes(args.search_tags)
