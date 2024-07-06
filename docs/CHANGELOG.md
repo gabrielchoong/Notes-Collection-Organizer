@@ -17,7 +17,17 @@ Fixed: for any bug fixes.
 Security: in case of vulnerabilities.
 
 -->
-## [Unreleased]
+## [v0.3.1] - 2024-07-07
+
+### Added
+- `--update` option updates tags used in all notes into `docs/tags.txt`.
+
+### Changed
+
+- `--target-folder` now creates folder if `path/to/folder` doesn't exist, instead of giving an error.
+
+
+## [v0.3.0] - 2024-07-07
 
 ### Added
 

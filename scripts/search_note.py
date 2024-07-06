@@ -1,13 +1,32 @@
 import os
 import re
 
-# This function finds duplicates between two lists => duplicates are tags
+# Used in search_notes()
 def find_tags_linear(list1, list2):
     set1 = set(list1)
     duplicates = [item for item in list2 if item in set1]
     return duplicates
 
 def search_notes(tags):
+    """
+    Search for notes containing specified tags in their YAML front matter within the 'notes' folder.
+
+    Args:
+        tags (list of str): List of tags to search for within note YAML front matter.
+
+    Prints:
+        - Information about the search operation and results.
+
+    Notes:
+        - Assumes YAML front matter format 'tags: [tag1, tag2, ...]'.
+        - Tags are matched case-insensitively.
+        - Stops looking for tags after encountering the second '---' in each note file.
+
+    Raises:
+        FileNotFoundError: If 'tags.txt' file in 'docs' folder is not found.
+
+    """
+
     print(f'Searching notes with tags: {tags}')
 
     notes_folder = 'notes'
@@ -21,7 +40,7 @@ def search_notes(tags):
 
     notes_with_matching_tags = []
 
-    # matching this pattern "tags: [List Of Tags]"
+    # Regular expression to find tags in note content
     tag_regex = re.compile(r'tags:\s*\[(.*?)\]', re.IGNORECASE | re.DOTALL)
 
     for note_filename in os.listdir(notes_folder):

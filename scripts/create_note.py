@@ -2,6 +2,20 @@
 import os
 from datetime import datetime
 
+def ensure_folder_exists(folder_path):
+
+    """
+    Ensure that the specified folder exists. If not, create it.
+    
+    Args:
+        folder_path (str): Path to the folder.
+    """
+
+    if not os.path.exists(folder_path):
+
+        print(f"Folder does not exist. Creating folder {folder_path}")
+        os.makedirs(folder_path)
+
 def create_note_from_template(titles, tags, target_folder, ):
 
     """
@@ -16,6 +30,7 @@ def create_note_from_template(titles, tags, target_folder, ):
         FileNotFoundError: If the template file does not exist, or path is incorrect.
     """
 
+    ensure_folder_exists(target_folder)
 
     # Changing this will mess up existing files. Proceed with caution.
     now = datetime.now()
@@ -62,6 +77,8 @@ def create_note_without_template(titles, tags, target_folder):
         tags (list of str): List of tags for the new notes.
         target_folder (str): Path to the folder where the new notes will be saved.
     """
+
+    ensure_folder_exists(target_folder)
 
     now = datetime.now()
     timestamp = now.strftime("%Y-%m-%d-%H-%M-%S")
