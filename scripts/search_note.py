@@ -1,5 +1,8 @@
 import os
 import re
+from scripts.config import load_config
+
+config = load_config()
 
 # Used in search_notes()
 def find_tags_linear(list1, list2):
@@ -29,8 +32,8 @@ def search_notes(tags):
 
     print(f'Searching notes with tags: {tags}')
 
-    notes_folder = 'notes'
-    tags_list_file = os.path.join('docs', 'tags.txt')
+    notes_folder = config['notesfolder']
+    tags_list_file = config['tagslistfile']
 
     with open(tags_list_file, 'r') as f:
         tags_list = f.read().split()

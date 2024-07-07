@@ -2,9 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 <!-- This is a comment in Markdown 
 
 Types of changes
@@ -18,11 +15,19 @@ Security: in case of vulnerabilities.
 
 -->
 
-## [Unreleased]
+## [v0.3.2] - 2024-07-07
 
-### Work In Progress
+### Added
 
-- Optimise `--update` option.
+- *Notes Organiser* now utilises a `config.ini` file for global variables such as notes folder, tags lists, author name etc.
+
+### Fixed
+
+- An issue regarding default target folder being the project root. You can now specify which directory you want as the default directory.
+
+### Notes
+
+- Update `config.ini` for it to take changes. There is no need to manually change the variable value in `scripts/`.
 
 ## [v0.3.1] - 2024-07-07
 

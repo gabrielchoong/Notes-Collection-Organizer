@@ -1,9 +1,13 @@
 import os
 import argparse
 
+from scripts.config import load_config
+
 from scripts.create_note import create_note_from_template, create_note_without_template
 from scripts.search_note import search_notes
 from scripts.update_note import update_tags
+
+config = load_config()
 
 def parsers():
     parser = argparse.ArgumentParser(description='Digital Notes Organizer.',
@@ -30,7 +34,7 @@ def parsers():
     )
 
     parser.add_argument(
-        '--target-folder', dest='target_folder', type=str, default='.', metavar='FOLDER',
+        '--target-folder', dest='target_folder', type=str, metavar='FOLDER',
         help='specify the target folder to save the new notes (default: current folder)',
     )
 
@@ -65,8 +69,8 @@ def main():
             create_note_from_template(args.title, args.create_tags, args.target_folder)
 
     if args.update:
-        tags_list_file = os.path.join('docs', 'tags.txt')
-        notes_folder = '~/Desktop/notes'
+        tags_list_file = config['tagslistfile']
+        notes_folder = config['notesfolder']
         update_tags(tags_list_file, notes_folder)
 
 

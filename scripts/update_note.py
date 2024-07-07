@@ -1,6 +1,9 @@
 import os
 import re
+from scripts.config import load_config
 from datetime import datetime
+
+config = load_config()
 
 def list_tags(tags_list_file):
 
@@ -31,7 +34,7 @@ def update_tags(tags_list_file, notes_folder, action=None):
     tag_regex = re.compile(r'tags:\s*\[(.*?)\]', re.IGNORECASE | re.DOTALL)
 
     # Python doesn't recognise `~` as the home directory
-    notes_folder = os.path.expanduser(notes_folder)
+    notes_folder = os.path.expanduser(config['notesfolder'])
 
     if not os.path.exists(notes_folder):
         raise FileNotFoundError(f"Notes folder '{notes_folder}' not found.")
@@ -55,7 +58,7 @@ def update_tags(tags_list_file, notes_folder, action=None):
 
                 # Check for new tags not in tags.txt
                 for tag in note_tags:
-                    if tag not in tags_list:
+                    if tag not in tags_list and tag != 'list of tags':
                         new_tags.add(tag)
 
     # Update tags.txt with new tags

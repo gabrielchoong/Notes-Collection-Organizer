@@ -1,8 +1,10 @@
 
 # executables
 
+__pycache__
 */__pycache__
 
 # development test
 
 test/
+development/
