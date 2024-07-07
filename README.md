@@ -44,9 +44,8 @@ python utils.py --search tag1 tag2
 
 The following features are currently being developed or are not fully functional:
 
-- The `--search` function is not yet implemented
-  - Searching Notes with No Tags: The logic to search for notes without tags is not yet implemented.
-  - Advanced Search Options: More advanced search options and filters and but not yet available
+- `--update` only works for adding tags, not removing them currently.
+- a `.config` file will be used for future versions `> v0.3.1`.
 
 ## Contact
 

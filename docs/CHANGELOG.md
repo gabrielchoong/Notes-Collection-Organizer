@@ -17,9 +17,17 @@ Fixed: for any bug fixes.
 Security: in case of vulnerabilities.
 
 -->
+
+## [Unreleased]
+
+### Work In Progress
+
+- Optimise `--update` option.
+
 ## [v0.3.1] - 2024-07-07
 
 ### Added
+
 - `--update` option updates tags used in all notes into `docs/tags.txt`.
 
 ### Changed
