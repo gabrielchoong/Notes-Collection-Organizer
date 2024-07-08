@@ -39,7 +39,6 @@ Security: in case of vulnerabilities.
 
 - `--target-folder` now creates folder if `path/to/folder` doesn't exist, instead of giving an error.
 
-
 ## [0.3.0] - 2024-07-07
 
 ### Added
