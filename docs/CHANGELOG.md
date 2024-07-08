@@ -15,7 +15,7 @@ Security: in case of vulnerabilities.
 
 -->
 
-## [v0.3.2] - 2024-07-07
+## [0.3.2] - 2024-07-07
 
 ### Added
 
@@ -29,7 +29,7 @@ Security: in case of vulnerabilities.
 
 - Update `config.ini` for it to take changes. There is no need to manually change the variable value in `scripts/`.
 
-## [v0.3.1] - 2024-07-07
+## [0.3.1] - 2024-07-07
 
 ### Added
 
@@ -40,7 +40,7 @@ Security: in case of vulnerabilities.
 - `--target-folder` now creates folder if `path/to/folder` doesn't exist, instead of giving an error.
 
 
-## [v0.3.0] - 2024-07-07
+## [0.3.0] - 2024-07-07
 
 ### Added
 
