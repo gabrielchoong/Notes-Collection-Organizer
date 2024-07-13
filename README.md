@@ -46,6 +46,7 @@ The following features are currently being developed or are not fully functional
 
 - `--update` only works for adding tags, not removing them currently.
 - a `.config` file will be used for future versions `> v0.3.1`.
+- see [here](https://github.com/gabrielchoong/Notes-Collection-Organizer/issues/1#issue-2393893617) for updates.
 
 ## Contact
 
