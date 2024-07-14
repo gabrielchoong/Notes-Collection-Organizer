@@ -4,50 +4,35 @@
 
 The Digital Notes Collection project is designed to streamline and manage note-taking using templates and flexible options for creating notes with or without templates. This project aims to improve the efficiency of note-taking and organization.
 
-## Features Implemented
+## Important
 
-1. **Initial Setup**
-   - Created the initial project structure.
-   - Set up version control with GitHub.
+This project assumes the markdown format `.md` is used for every note. If you already use a plain text file `.txt` to store your notes, I highly encourage you to try out this alternative note format. More information can be found [here](https://www.markdownguide.org/basic-syntax/).
 
-2. **Command Line Interface (CLI)**
-   - Implemented argument parsing for various options using `argparse`.
-   - Added options for creating notes with a template and creating blank notes.
+## Features in Version 0.3.2
 
-3. **Note Creation Functions**
-   - `create_note_from_template(titles, create_tags, target_folder)`: Creates a new note based on a specified template.
-   - `create_note_without_template(titles, create_tags, target_folder)`: Creates a new blank note without a template.
+- Create a note with the `--create` option.
+- Target Folder can be specified with the `--target-folder` option.
+  - By default, the app will create a folder called `notes/` within the project root.
+- A template can be used for creating new notes. This can be disabled using the `--no-template` option. You can also customise the template directory and template contents in the `config.ini` file.
+- Tags are highly advised to be used when creating new notes. This can be done using the `--tag` option and passing tag(s) desired, separated with a space in between.
+  - Tags can be modified in the future after the creation of the note.
+- Search a note with the `--search` option.
+  - Currently, it can only search tags used in all notes.
+- Update all notes used with the `--update` option.
+  - This option will search every note within a note folder, grabbing the tags and store it in a `tags.txt` file which is located in the `docs/` directory in the project root.
 
-4. **Template Handling**
-   - Added functionality to check for the existence of a template file and raise an error if not found.
-   - Implemented reading template content from a file.
+### Using config.ini
 
-5. **Handling Different Options**
-   - Ensured that the `--no-template` option works correctly without arguments and only creates a blank note when specified.
+- Starting from v0.3.2, a `config.ini` file will be used to store user variables. This is different from all verions before, where variables are manually assigned.
 
-6. **Error Handling**
-   - Added error handling for missing template files.
+## Planned Features
 
-7. **Utility Scripts**
-   - Created `tasks.sh` for general shell scripting tasks.
-   - Implemented various tasks such as syncing README files and running tests.
-   - Added the option to run all tasks sequentially.
+Currently, as I'm developing this project on my own, I will only be updating this project every two days. There are certain features that I want to add in the future, including:
 
-8. **File Organization**
-   - Organized utility functions into a separate `scripts/` folder for better manageability.
-   - Kept track of tasks in `tasks.sh`.
-
-9. **Documentation**
-   - Maintained a `README.md` for project description and usage instructions.
-   - Planned to create a `CHANGELOG.md` to keep track of changes and updates.
-
-## Main Features in Version 0.2.0
-
-- Functionality to create notes without a template.
-- Added `tasks.sh` for file versions and backup.
-- Minor bug fixes regarding the new `--no-template` option.
-
-## Notes
-
-- Recent development highlights include better management of note creation options and improved error handling.
-- Future updates may include additional features and refinements based on user feedback and project requirements.
+- Search option with varying arguments (date, name, title etc.).
+- Sort option for notes. Although I'm not sure why is this feature required as most file manager already have a sort function.
+- Conversion of `.md` files to `.pdf` format. This is the top priority for any file conversions for this project.
+- GUI of some sort. However I recommend you use Visual Studio Code or any other text editors with the markdown preview function.
+  - It's likely to be written in electron as well.
+- OCR to convert handwritten notes into markdown format.
+- File sharing. This is likely not going to come in anytime soon.

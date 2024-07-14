@@ -15,6 +15,12 @@ Security: in case of vulnerabilities.
 
 -->
 
+## [Unreleased]
+
+### Changed
+
+- Refactored `search_note.py` for readability.
+
 ## [0.3.2] - 2024-07-07
 
 ### Added
